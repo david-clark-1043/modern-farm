@@ -5,6 +5,8 @@ import { createWheat } from "./seeds/wheat.js";
 import { createSoybean } from "./seeds/soybean.js";
 import { createSunflower } from "./seeds/sunflower.js";
 import { createPotato } from "./seeds/potato.js";
+import { addPlant, usePlants } from "./field.js";
+
 
 console.log("Welcome to the main module");
 
@@ -29,3 +31,11 @@ console.log(sunflowerSeed)
 
 const potatoSeed = createPotato()
 console.log(potatoSeed)
+
+addPlant(potatoSeed)
+const potatoField = usePlants()
+console.log("potato field", potatoField)
+
+addPlant(cornSeed)
+const cornField = usePlants()
+console.log("corn field", cornField)
