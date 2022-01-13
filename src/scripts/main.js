@@ -8,6 +8,7 @@ import { createPotato } from "./seeds/potato.js";
 import { addPlant, usePlants } from "./field.js";
 import { plantSeeds } from "./tractor.js";
 import { harvestPlants } from "./harvester.js";
+import { Catalog } from "./catalog.js";
 
 console.log("Welcome to the main module");
 
@@ -18,6 +19,7 @@ const yearlyField = usePlants()
 console.log("yearly field", yearlyField)
 const harvestedCrops = harvestPlants(yearlyField)
 console.log("harvested plants", harvestedCrops)
+Catalog(harvestedCrops);
 
 const asparagusSeed = createAsparagus()
 console.log(asparagusSeed)
