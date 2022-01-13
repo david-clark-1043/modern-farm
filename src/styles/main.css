@@ -12,6 +12,11 @@ textarea {
 	font-size: 14px;
 	line-height: 1.5;
 }
+/* styles the crop container <main> for flexbox and wrapping so crops are in grid */
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
@@ -34,7 +39,3 @@ h1,h2,h3,h4,h5,h6 {
     background-color: darksalmon;
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-}

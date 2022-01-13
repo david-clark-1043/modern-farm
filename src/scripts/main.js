@@ -1,3 +1,4 @@
+// import necessary functions
 import { createPlan } from "./plan.js"
 import { createAsparagus } from "./seeds/asparagus.js"
 import { createCorn } from "./seeds/corn.js";
@@ -10,17 +11,19 @@ import { plantSeeds } from "./tractor.js";
 import { harvestPlants } from "./harvester.js";
 import { Catalog } from "./catalog.js";
 
-console.log("Welcome to the main module");
-
+// console.log("Welcome to the main module");
+// Make yearly plan for crops
 const yearlyPlan = createPlan();
-console.log(yearlyPlan);
+// plant the seeds in the field
 plantSeeds(yearlyPlan);
 const yearlyField = usePlants()
-console.log("yearly field", yearlyField)
+// harvest the seeds
 const harvestedCrops = harvestPlants(yearlyField)
-console.log("harvested plants", harvestedCrops)
+// catalog the seeds and publish to the website for selling
 Catalog(harvestedCrops);
 
+
+/* extra console logs used for testing
 const asparagusSeed = createAsparagus()
 console.log(asparagusSeed)
 
@@ -46,3 +49,4 @@ console.log("potato field", potatoField)
 addPlant(cornSeed)
 const cornField = usePlants()
 console.log("corn field", cornField)
+*/
