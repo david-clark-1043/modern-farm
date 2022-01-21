@@ -16,6 +16,12 @@ textarea {
 main {
     display: flex;
     flex-wrap: wrap;
+    background-color: lightgoldenrodyellow;
+    justify-content: space-around;
+}
+
+.plant {
+    padding: 1em;
 }
 
 h1,h2,h3,h4,h5,h6 {
