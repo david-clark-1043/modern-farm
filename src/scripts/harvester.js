@@ -6,11 +6,11 @@ export const harvestPlants = (plantField) => {
     for(let plant of plantField) {
         // Half of corn crop sold to ranchers, so only half as much available
         if(plant.type === "Corn"){
-            for (let step = 0; step < plant.output / 2; step++) {
+            for (let i of [...Array(plant.output / 2).keys()]) {
                 harvestedCrops.push(plant)
             }
         } else {
-            for (let step = 0; step < plant.output; step++) {
+            for (let i of [...Array(plant.output).keys()]) {
                 harvestedCrops.push(plant)
             }
         }
